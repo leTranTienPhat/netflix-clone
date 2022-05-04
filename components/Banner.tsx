@@ -4,6 +4,7 @@ import { baseUrl } from "../contants/movie"
 import { Movie } from "../typings"
 import { FaPlay } from "react-icons/fa"
 import { InformationCircleIcon } from "@heroicons/react/solid"
+
 type Props = {
   netflixOriginals: Movie[]
 }
@@ -13,7 +14,11 @@ const Banner = ({ netflixOriginals }: Props) => {
 
   useEffect(() => {
     setMovie(netflixOriginals[Math.floor(Math.random() * netflixOriginals.length)])
-  }, [netflixOriginals])
+  }, [])
+
+  console.log(movie)
+  console.log("Backdrop path " + baseUrl + movie?.backdrop_path)
+  console.log("Poster path " + baseUrl + movie?.poster_path)
 
   return (
     <div className="flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12">
@@ -24,7 +29,6 @@ const Banner = ({ netflixOriginals }: Props) => {
           objectFit="cover"
         />
       </div>
-
       <h1 className="text-2xl md:text-4xl lg:text-7xl font-bold">{movie?.title || movie?.name || movie?.original_name}</h1>
       <p className="max-w-xs text-xs text-shadow-md md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl">{movie?.overview}</p>
 
