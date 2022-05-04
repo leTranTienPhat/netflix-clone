@@ -17,6 +17,7 @@ const Header = (props: Props) => {
       window.removeEventListener("scroll", handleScroll)
     }
   })
+
   return (
     <header className={`${isScroll && "bg-[#141414]"}`}>
       <div className="flex items-center space-x-2 md:space-x-10">
