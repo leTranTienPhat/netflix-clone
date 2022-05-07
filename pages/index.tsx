@@ -33,7 +33,7 @@ const Home = ({
   const showModal = useRecoilValue(modalState)
 
   return (
-    <div className="relative h-screen bg-gradient-to-b lg:h-[140vh]">
+    <div className={`relative h-screen bg-gradient-to-b lg:h-[140vh]`}>
       <Head>
         <title>Netflix's Clone</title>
         <link rel="icon" href="/favicon.ico" />
@@ -46,7 +46,6 @@ const Home = ({
           <Row title="Trending Now" movies={trendingNow} />
           <Row title="Top Rated" movies={topRated} />
           <Row title="Action Thrillers" movies={actionMovies} />
-          {/* My List */}
 
           <Row title="Comedies" movies={comedyMovies} />
           <Row title="Scary Movies" movies={horrorMovies} />
@@ -55,7 +54,6 @@ const Home = ({
 
         </section>
         {showModal && <Modal />}
-        {/* Footer */}
       </main>
 
 
