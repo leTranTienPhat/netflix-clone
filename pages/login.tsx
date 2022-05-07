@@ -9,9 +9,7 @@ type Inputs = {
   password: string,
 };
 
-type Props = {}
-
-const Login = (props: Props) => {
+const Login = () => {
   const [login, setLogin] = useState(false)
   const { register, handleSubmit, formState: { errors } } = useForm<Inputs>();
   const { signIn, signUp } = useAuth()
