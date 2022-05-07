@@ -79,11 +79,13 @@ export const AuthProvider = ({ children }: Props) => {
 
   return (
     <AuthContext.Provider value={memoedValue}>
-      {initialLoading && children}
+      {!initialLoading && children}
     </AuthContext.Provider>
   )
 }
 
-export const useAuth = () => {
+const useAuth = () => {
   return useContext(AuthContext)
 }
+
+export default useAuth
