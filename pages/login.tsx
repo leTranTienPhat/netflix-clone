@@ -59,13 +59,15 @@ const Login = (props: Props) => {
           New to Netflix?
           <button type="submit" className="text-white hover:underline ml-1 font-semibold text-[#e50914]" onClick={() => setLogin(false)}>Sign up now</button>
         </div>
+
+        <div className="absolute rounded bg-black/90 px-4 py-2 mx-auto top-full left-0 w-full font-light">
+          <span className="mb-4 block">Sign up for new account or use this account to login</span>
+          <p>Email: admin@gmail.com</p>
+          <p>Password: admin123</p>
+        </div>
       </form >
 
-      <div className="absolute rounded bg-black/90 px-4 py-2 left-20 font-light">
-        <span className="mb-4 block">Sign up for new account or use this account to login</span>
-        <p>Email: admin@gmail.com</p>
-        <p>Password: admin123</p>
-      </div>
+
     </div >
   )
 }
