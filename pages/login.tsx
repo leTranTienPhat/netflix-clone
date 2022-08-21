@@ -59,7 +59,7 @@ const Login = () => {
         </div>
 
         <div className="absolute rounded bg-black/90 px-4 py-2 mx-auto top-full left-0 w-full font-light">
-          <span className="mb-4 block">Sign up for new account or use this account to login</span>
+          <span className="mb-4 block">Please use this account to login</span>
           <p>Email: admin@gmail.com</p>
           <p>Password: admin123</p>
         </div>
